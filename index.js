@@ -186,6 +186,9 @@ if(command === "admin") {
 //Help command.
 if(command === "help") {
        message.delete().catch(O_o=>{});
+   if(!message.member.hasPermission('ADMINISTRATOR'))
+   return message.reply("you are not permitted to use this.");
+  
       let days = Math.floor(client.uptime / 86400000);
       let hours = Math.floor(client.uptime / 3600000) % 24;
       let minutes = Math.floor(client.uptime / 60000) % 60;
