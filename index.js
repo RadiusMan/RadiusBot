@@ -191,7 +191,7 @@ if(command === "help") {
       let minutes = Math.floor(client.uptime / 60000) % 60;
       let seconds = Math.floor(client.uptime / 1000) % 60;
       let botembed = new Discord.RichEmbed()
-          .setDescription(`💬 [**dbo9h-T&S v1.34**](https://discord.gg/RjNHWbX). Running on [**Node.js v11.4.2**](https://nodejs.org/en/) & [**Discord.js v11.5.1**](https://discord.js.org/)\nBot uptime **${days}d ${hours}h ${minutes}m ${seconds}s**.`)
+          .setDescription(`💬 [**dbo9h-T&S v1.0**](https://discord.gg/HXbzYJy7QS). Running on [**Node.js v11.4.2**](https://nodejs.org/en/) & [**Discord.js v11.5.1**](https://discord.js.org/)\nBot uptime **${days}d ${hours}h ${minutes}m ${seconds}s**.`)
           .setColor('#FFF400')
           .setTimestamp()
           .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
@@ -400,7 +400,7 @@ if(command === "dbo9htsupdate") {
           .setTimestamp()
           .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
           .setThumbnail(" https://i.imgur.com/HHrPPYY.png")
-          .addField("__**dbo9h Tools & Structures updated!**__", "\nChangenotes can be found [**here**](https://steamcommunity.com/sharedfiles/filedetails/changelog/1832884459).\n\nSend in a bugreport [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101660969/). Unsure if it's a bug or not? Send it anyway!\nSuggestions should be sent in [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101663119/), we'd love to hear from you.\nSupport our work by [**donating**](https://arkmod.net/donations/) a few bucks.\n\nHope you enjoy the update!", false);
+          .addField("__**dbo9h Tools & Structures updated!**__", "\nChangenotes can be found [**here**](https://steamcommunity.com/sharedfiles/filedetails/changelog/1832884459).\n\nSend in a bugreport [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101660969/). Unsure if it's a bug or not? Send it anyway!\nSuggestions should be sent in [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101663119/), we'd love to hear from you.\nSupport our work by [**donating**](https://www.paypal.com/paypalme/db9h) a few bucks.\n\nHope you enjoy the update!", false);
          message.channel.send(botembed).then(sentEmbed => {
             });
           }
