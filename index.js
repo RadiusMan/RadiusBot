@@ -139,7 +139,7 @@ if(command === "admin") {
           .addField(`${config.prefix}` + "servers", "Show all servers bot is connected to.")
           .addField(`${config.prefix}` + "kick", "Kicks user specified with reason specified.")
           .addField(`${config.prefix}` + "google", "Shows people how to use Google.")
-          .addField(`${config.prefix}` + "kickbot", "Kicks bot from server ID. This can only be used by bot owner.");
+          .addField(`${config.prefix}` + "kickbot", "Kicks bot from server ID. This can only be used by bot owner.")
           .addField(`${config.prefix}` + "activity", "Change activity. This can only be used by bot owner");
          message.channel.send(botembed);
        }
