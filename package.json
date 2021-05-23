@@ -1,0 +1,19 @@
+{
+  "name": "dbo9h",
+  "version": "1.0.0",
+  "description": "dbo9h Discord Bot",
+  "main": "bot.js",
+  "author": "dbo9h",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^11.4.2",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC"
+
+}
