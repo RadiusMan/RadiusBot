@@ -542,7 +542,7 @@ if(command === "purge") {
 
 //Kickbot command
   if (command === "kickbot") {
-         if (message.author.id !== ownerID) return message.channel.reply("لا يسمح لك باستخدام هذا الأمر.");
+         if (message.author.id !== ownerID) return message.channel.send("لا يسمح لك باستخدام هذا الأمر.");
 
          var error17 = new Discord.RichEmbed().setColor("990033")
              .setDescription('Please enter a valid server ID. **.servers** shows servers ID.')
