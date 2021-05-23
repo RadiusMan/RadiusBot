@@ -50,13 +50,13 @@ client.on("ready", () => {
 //Print to log when bot have joined a server.
 client.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+  //client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
 //Print to log when bot have been removed from a server.
 client.on("guildDelete", guild => {
   console.log(`${client.user.username} have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+  //client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
 //Scans all new messages, deletes and notifies user that they are not permitted to use the swear words if its match the filter below.
