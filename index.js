@@ -12,7 +12,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 //Define owner. Me.
-const ownerID = '537320927378014211';
+const ownerID = '240388513210695680';
 
 //Levelup system.
 var stats = {};
@@ -28,7 +28,7 @@ if (message.webhookID || message.author.bot) {
 } else {
   // block of code to be executed if the condition is false
 
-  if (message.guild.id != '540138104900812814')return;{
+  if (message.guild.id != '335008833267040256')return;{
 
     if (message.author.id == client.user.id)
         return;
@@ -99,7 +99,7 @@ fs.readFile('/volume1/stats.json', (err, data) => {
 
 client.on('messageDelete', message => {
   //Should only execute on dbo9h server.
-  if (message.guild.id != '540138104900812814')return;{
+  if (message.guild.id != '335008833267040256')return;{
     //Dont execute if its a webhook or a bot, preventing infinite loops and crashes.
     if (message.webhookID || message.author.bot) {
     } else {
@@ -107,7 +107,7 @@ let botembed = new Discord.RichEmbed()
 .setDescription(`💬 Message deleted!`)
         .setColor('#FFF400')
         .setTimestamp()
-        .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
+        .setFooter("dbo9h bot", " https://i.imgur.com/HHrPPYY.png")
         .setThumbnail(" https://i.imgur.com/HHrPPYY.png")
         .addField(`**The message**`, `${message.cleanContent}`, false)
         .addField(`**Message info**`, `From ${message.author} in ${message.channel}`, false);      
@@ -123,7 +123,7 @@ client.on("ready", () => {
 
   console.log(`${client.user.username} bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
 
-  client.user.setActivity(`dbo9h-T&S | .help`);
+  client.user.setActivity(`dbo9h | .help`);
 });
 
 
@@ -235,7 +235,7 @@ if(command === "admin") {
 //Give official server role
   if(command === "addofficial") {
      message.delete().catch(O_o=>{});
-     if (message.guild.id != '540138104900812814')
+     if (message.guild.id != '335008833267040256')
       return;{
       let member = message.member;
        message.member.addRole('594967855473360926');
@@ -246,7 +246,7 @@ if(command === "admin") {
 //Remove official server role
   if(command === "removeofficial") {
      message.delete().catch(O_o=>{});
-     if (message.guild.id != '540138104900812814')
+     if (message.guild.id != '335008833267040256')
       return;{
       let member = message.member;
        message.member.removeRole('594967855473360926');
@@ -271,10 +271,10 @@ if(command === "help") {
       let minutes = Math.floor(client.uptime / 60000) % 60;
       let seconds = Math.floor(client.uptime / 1000) % 60;
       let botembed = new Discord.RichEmbed()
-          .setDescription(`💬 [**dbo9h-T&S v1.34**](https://discord.gg/RjNHWbX). Running on [**Node.js v11.4.2**](https://nodejs.org/en/) & [**Discord.js v11.5.1**](https://discord.js.org/)\nBot uptime **${days}d ${hours}h ${minutes}m ${seconds}s**.`)
+          .setDescription(`💬 [**dbo9h bot v1.34**](https://discord.gg/RjNHWbX). Running on [**Node.js v11.4.2**](https://nodejs.org/en/) & [**Discord.js v11.5.1**](https://discord.js.org/)\nBot uptime **${days}d ${hours}h ${minutes}m ${seconds}s**.`)
           .setColor('#FFF400')
           .setTimestamp()
-          .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
+          .setFooter("dbo9h bot", " https://i.imgur.com/HHrPPYY.png")
           .setThumbnail(" https://i.imgur.com/HHrPPYY.png")
         //.setAuthor("dbo9h bot", "https://discordapp.com", " https://i.imgur.com/HHrPPYY.png")//
           //.addField("__**Information**__", "Gaia [**Website**](https://arkgaia.net/) can be found here.\nSpawncodes, engramentries and spawnlocations can be found [**here**](https://arkgaia.net/spawncodes/).\nGaia branded mods, [**Gaia**](http://steamcommunity.com/sharedfiles/filedetails/?id=1125442531) - [**Gaia Beacons**](https://steamcommunity.com/sharedfiles/filedetails/?id=1686302787) - [**Gaia Wyverns**](https://steamcommunity.com/sharedfiles/filedetails/?id=1921128412) - [**Dino Hunter**](https://steamcommunity.com/sharedfiles/filedetails/?id=1401103561) - [**BombDo**](https://steamcommunity.com/sharedfiles/filedetails/?id=1555286809).", false)
@@ -307,7 +307,7 @@ if(!message.member.roles.some(r=>["G_D_A"].includes(r.name)) )
     Desc)
     .setColor("#FFF400")
     .setTimestamp()
-    .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
+    .setFooter("dbo9h bot", " https://i.imgur.com/HHrPPYY.png")
   
     addJob.send(botembed);
     }
@@ -336,7 +336,7 @@ if(!message.member.roles.some(r=>["G_D_A"].includes(r.name)) )
     Answer)
     .setColor("#FFF400")
     .setTimestamp()
-    .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
+    .setFooter("dbo9h bot", " https://i.imgur.com/HHrPPYY.png")
   
     addfaq.send(botembed);
     }
@@ -362,7 +362,7 @@ if (command === 'addtodo') {
     TodoThing)
     .setColor("#FFF400")
     .setTimestamp()
-    .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
+    .setFooter("dbo9h bot", " https://i.imgur.com/HHrPPYY.png")
   
     addTodo.send(botembed);
     }
@@ -388,7 +388,7 @@ if (command === 'addvote') {
     VoteThing)
     .setColor("#FFF400")
     .setTimestamp()
-    .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
+    .setFooter("dbo9h bot", " https://i.imgur.com/HHrPPYY.png")
   
     addVote.send(botembed).then(sentEmbed => {
           sentEmbed.react("👍")
@@ -478,7 +478,7 @@ if(command === "gaiaupdate") {
       let botembed = new Discord.RichEmbed()
           .setColor('#FFF400')
           .setTimestamp()
-          .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
+          .setFooter("dbo9h bot", " https://i.imgur.com/HHrPPYY.png")
           .setThumbnail(" https://i.imgur.com/HHrPPYY.png")
           .addField("__**dbo9h Tools & Structures updated!**__", "\nChangenotes can be found [**here**](https://steamcommunity.com/sharedfiles/filedetails/changelog/1832884459).\n\nSend in a bugreport [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101660969/). Unsure if it's a bug or not? Send it anyway!\nSuggestions should be sent in [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101663119/), we'd love to hear from you.\nSupport our work by [**donating**](https://arkmod.net/donations/) a few bucks.\n\nHope you enjoy the update!", false);
          message.channel.send(botembed).then(sentEmbed => {
@@ -574,7 +574,7 @@ if(command === "testserver") {
 
     let botembed = new Discord.RichEmbed()
         .setColor("#FFF400")
-        .addField("dbo9h-T&S is currently connected to, and serving,", string)
+        .addField("dbo9h bot is currently connected to, and serving,", string)
         .setTimestamp()
         .setFooter("Command used by " + message.author.username, message.author.avatarURL);
     message.channel.send(botembed);
@@ -632,7 +632,7 @@ if(command === "purge") {
          });
 
          client.guilds.get(args[0]).leave();
-         message.channel.send(`dbo9h-T&S was been removed from server id **[${args[0]}]**`)
+         message.channel.send(`dbo9h bot was been removed from server id **[${args[0]}]**`)
      }
 
   });
@@ -643,14 +643,14 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
   let botembed = new Discord.RichEmbed()
   .setColor("#FFF400")
-  //.setAuthor('dbo9h-T&S', ' https://i.imgur.com/HHrPPYY.png')
+  //.setAuthor('dbo9h bot', ' https://i.imgur.com/HHrPPYY.png')
   .setThumbnail(member.user.avatarURL)
   .setDescription(`Welcome to dbo9h discord, ${member}!\nPlease read through <#335009347287515137> prior to using this discord.`)
   .setTimestamp()
-  .setFooter("dbo9h-T&S", client.user.avatarURL);
+  .setFooter("dbo9h bot", client.user.avatarURL);
     channel.send(botembed);
       console.log('User ' + member.user.tag + ' has joined ' + member.guild.name + '.');
   });
 
 //Auth
-client.login(""NzYyNTM5ODY4MTQzNDg0OTI4.X3qolw.T1uv6bK6jFe4YpuSQ88g_sWVXLc"");
+client.login(config.token);
