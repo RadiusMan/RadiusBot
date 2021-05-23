@@ -31,7 +31,7 @@ let botembed = new Discord.RichEmbed()
         .setThumbnail(" https://i.imgur.com/HHrPPYY.png")
         .addField(`**The message**`, `${message.cleanContent}`, false)
         .addField(`**Message info**`, `From ${message.author} in ${message.channel}`, false);      
-client.channels.get("634189272068390936").send(botembed)
+client.channels.get("695099267454599198").send(botembed)
 }}});
 
 //Define cooldown variable and amount of seconds.
