@@ -100,10 +100,10 @@ setTimeout(() =>{
 if(command == "kick") {
         message.delete()
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        if(!kUser) return message.channel.send("Kick failed, please **@mention** your target.");
-        let kReason = args.join(" ").slice(0);
         if(!message.member.hasPermission('ADMINISTRATOR'))
         return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+        if(!kUser) return message.channel.send("Kick failed, please **@mention** your target.");
+        let kReason = args.join(" ").slice(0);
     
         let kickEmbed = new Discord.RichEmbed()
         .setDescription("**User kicked**")
@@ -182,7 +182,8 @@ if(command === "admin") {
     
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
-    message.channel.send(sayMessage);
+    //message.channel.send(sayMessage);
+    client.user.setActivity(sayMessage);
   }
 
 //Help command.
