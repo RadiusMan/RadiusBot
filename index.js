@@ -100,8 +100,9 @@ setTimeout(() =>{
 if(command == "kick") {
         message.delete()
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        if(!message.member.hasPermission('ADMINISTRATOR'))
-        return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+        if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+        //if(!message.member.hasPermission('ADMINISTRATOR'))
+        //return message.reply("لا يسمح لك باستخدام هذا الأمر.");
         if(!kUser) return message.channel.send("Kick failed, please **@mention** your target.");
         let kReason = args.join(" ").slice(0);
     
@@ -118,8 +119,9 @@ if(command == "kick") {
 //Admin commands.
 if(command === "admin") {
        message.delete().catch(O_o=>{});
-          if(!message.member.hasPermission('ADMINISTRATOR'))
-          return message.reply("لا يسمح لك باستخدام هذا الأمر.")
+          //if(!message.member.hasPermission('ADMINISTRATOR'))
+          //return message.reply("لا يسمح لك باستخدام هذا الأمر.")
+          if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
 
               let botembed = new Discord.RichEmbed()
           .setDescription(`💬 __**dbo9h server admin commands**__\nYou must have the [*G_D_A*] role to be able to use these commands.`)
@@ -147,8 +149,8 @@ if(command === "admin") {
 //Ping command. Regular and bot-to-websocket.  
   if(command === "ping") {
      message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR'))
-      return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+      if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
 
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
@@ -178,8 +180,8 @@ if(command === "admin") {
 
   //Say command. 
   if(command === "say") {
- if(!message.member.hasPermission('ADMINISTRATOR'))
-      return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
     
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
@@ -189,7 +191,7 @@ if(command === "admin") {
 //Change Activity
     if(command === "activity") {
   //if(!message.member.hasPermission('ADMINISTRATOR'))
-   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر فقط صاحب البوت.");
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
     
     const activitym = args.join(" ");
     message.delete().catch(O_o=>{}); 
@@ -198,8 +200,8 @@ if(command === "admin") {
 //Help command.
 if(command === "help") {
        message.delete().catch(O_o=>{});
-   if(!message.member.hasPermission('ADMINISTRATOR'))
-   return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+   //if(!message.member.hasPermission('ADMINISTRATOR'))
+     if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
   
       let days = Math.floor(client.uptime / 86400000);
       let hours = Math.floor(client.uptime / 3600000) % 24;
@@ -222,8 +224,8 @@ if(command === "help") {
 //Add into the joblist channel
 if (command === 'addjob') {
   message.delete().catch(O_o=>{});
-if(!message.member.hasPermission('ADMINISTRATOR'))
-  return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+//if(!message.member.hasPermission('ADMINISTRATOR'))
+  if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
   
   let str = `${args.join(' ')}` ;
   let Title = str.split(/"/)[1];
@@ -252,8 +254,8 @@ if(!message.member.hasPermission('ADMINISTRATOR'))
 //Add into the faq channel
 if (command === 'addfaq') {
   message.delete().catch(O_o=>{});
-if(!message.member.hasPermission('ADMINISTRATOR'))
-  return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+//if(!message.member.hasPermission('ADMINISTRATOR'))
+  if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
   
   let str = `${args.join(' ')}` ;
   let Question = str.split(/"/)[1];
@@ -282,8 +284,8 @@ if(!message.member.hasPermission('ADMINISTRATOR'))
 //Add into the todolist channel
 if (command === 'addtodo') {
   message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR'))
-   return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
   
   let str = `${args.join(' ')}` ;
   let TodoThing = str.split(/"/)[1];
@@ -309,8 +311,8 @@ if (command === 'addtodo') {
 //Voting system
 if (command === 'addvote') {
   message.delete().catch(O_o=>{});
-  if(!message.member.hasPermission('ADMINISTRATOR'))
-    return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+  //if(!message.member.hasPermission('ADMINISTRATOR'))
+    if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
   
   let str = `${args.join(' ')}` ;
   let VoteThing = str.split(/"/)[1];
@@ -411,8 +413,8 @@ if (command === 'addvote') {
 //Command used for announcing dbo9h updates.
 if(command === "dbo9htsupdate") {
       message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR'))
-   return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
       
       message.channel.send("@everyone");
       let botembed = new Discord.RichEmbed()
@@ -420,7 +422,8 @@ if(command === "dbo9htsupdate") {
           .setTimestamp()
           .setFooter("dbo9h-T&S", " https://i.imgur.com/HHrPPYY.png")
           .setThumbnail(" https://i.imgur.com/HHrPPYY.png")
-          .addField("__**dbo9h Tools & Structures تم تحديثه!!**__", "\nيمكنك العثور على المتغيرات بالضغط على [**هنا**](https://steamcommunity.com/sharedfiles/filedetails/changelog/1832884459).\n\nاذا وجدت خطأ ارسله [**هنا**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101660969/). غير متأكد ما إذا كان خطأ أم لا؟ أرسلها على أي حال!\nاذا لديك اقتراح ارسله [**هنا**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101663119/), نحب ان نسمع منك.\nدعم عملنا من خلال [**الدعم**](https://www.paypal.com/paypalme/db9h) بضعة دولارات.\n\nأتمنى أن تستمتع بالتحديث!\n\n\n\n\n__**dbo9h Tools & Structures updated!**__", "\nChangenotes can be found [**here**](https://steamcommunity.com/sharedfiles/filedetails/changelog/1832884459).\n\nSend in a bugreport [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101660969/). Unsure if it's a bug or not? Send it anyway!\nSuggestions should be sent in [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101663119/), we'd love to hear from you.\nSupport our work by [**donating**](https://www.paypal.com/paypalme/db9h) a few bucks.\n\nHope you enjoy the update!", false);
+          .addField("__**dbo9h Tools & Structures updated!**__", "\nChangenotes can be found [**here**](https://steamcommunity.com/sharedfiles/filedetails/changelog/1832884459).\n\nSend in a bugreport [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101660969/). Unsure if it's a bug or not? Send it anyway!\nSuggestions should be sent in [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101663119/), we'd love to hear from you.\nSupport our work by [**donating**](https://www.paypal.com/paypalme/db9h) a few bucks.\n\nHope you enjoy the update!", false)
+          .addField("__**dbo9h Tools & Structures تم تحديثه!!**__", "\nيمكنك العثور على المتغيرات بالضغط على [**هنا**](https://steamcommunity.com/sharedfiles/filedetails/changelog/1832884459).\n\nاذا وجدت خطأ ارسله [**هنا**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101660969/). غير متأكد ما إذا كان خطأ أم لا؟ أرسلها على أي حال!\nاذا لديك اقتراح ارسله [**هنا**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101663119/), نحب ان نسمع منك.\nدعم عملنا من خلال [**الدعم**](https://www.paypal.com/paypalme/db9h) بضعة دولارات.\n\nأتمنى أن تستمتع بالتحديث!", false);
          message.channel.send(botembed).then(sentEmbed => {
             });
           }
@@ -464,8 +467,8 @@ if(command === "dbo9htsupdate") {
 //Show testserver info
 if(command === "testserver") {
     message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR'))
-   return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
       
       let string = '';
  {
@@ -484,8 +487,8 @@ if(command === "testserver") {
 //Servers command
   if (command === "servers") {
   message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR'))
-   return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
       
     let string = '';
 
@@ -505,8 +508,8 @@ if(command === "testserver") {
 //Google.
   if(command === "google") {
       message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR'))
-   return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
       
       message.channel.send(`The answer to your question can be found here <http://tiny.cc/bd8gfz>.`);
   }
@@ -514,8 +517,8 @@ if(command === "testserver") {
 //Uptime command. Specified in milliseconds. % is modulo.
   if(command === "uptime") {
       message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR'))
-   return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
       
       let days = Math.floor(client.uptime / 86400000);
       let hours = Math.floor(client.uptime / 3600000) % 24;
@@ -527,8 +530,9 @@ if(command === "testserver") {
 
 //Purge command. 
 if(command === "purge") {
- if(!message.member.hasPermission('ADMINISTRATOR'))
-   return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ //if(!message.member.hasPermission('ADMINISTRATOR'))
+   //return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+  if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
       
     const deleteCount = parseInt(args[0], 10);
         if(!deleteCount || deleteCount < 2 || deleteCount > 100)
