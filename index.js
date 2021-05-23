@@ -539,7 +539,7 @@ if(command === "purge") {
 
 //Welcome message.
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(ch => ch.name === "landing-dbo9h");
+  const channel = member.guild.channels.find(ch => ch.name === "wlc");
   if (!channel) return;
   let botembed = new Discord.RichEmbed()
   .setColor("#FFF400")
