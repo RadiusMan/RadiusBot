@@ -142,6 +142,7 @@ if(command === "admin") {
           .addField(`${config.prefix}` + "kick", "Kicks user specified with reason specified.")
           .addField(`${config.prefix}` + "google", "Shows people how to use Google.")
           .addField(`${config.prefix}` + "kickbot", "Kicks bot from server ID. This can only be used by bot owner.")
+          .addField(`${config.prefix}` + "reactionrole", "Kicks bot from server ID. This can only be used by bot owner.")
           .addField(`${config.prefix}` + "activity", "Change activity. This can only be used by bot owner");
          message.channel.send(botembed);
        }
@@ -187,7 +188,27 @@ if(command === "admin") {
     message.delete().catch(O_o=>{}); 
     message.channel.send(sayMessage);
   }
+  // test
+  
+  if(command === "reactionrole") {
 
+execute(message, args, Discord, client) {
+
+const channel = '664370348300697601';
+const notifyrole = message.guild.roles.cache.find(role => role.name === "db9T&S");
+
+const notifyroleEmoji = '✨';
+
+let embed = new Discord.MessageEmbed()
+.setColor('#e42643')
+.setTitle('تجربة')
+.setDescription('test \n\n'
++ `${notifyroleEmoji} dbo9h-T&S Notify you`);
+
+let messageEmbed = await message.channel.send(embed);
+messageEmbed.react(notifyroleEmoji);
+  
+  
 //Change Activity
     if(command === "activity") {
   //if(!message.member.hasPermission('ADMINISTRATOR'))
