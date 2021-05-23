@@ -133,7 +133,7 @@ if(command === "admin") {
           .addField(`${config.prefix}` + "addtodo", "Adds a todo-entry to <#335008973126107139>.")
           .addField(`${config.prefix}` + "addvote", "Adds a vote-entry to <#335008891450687491>.")
           .addField(`${config.prefix}` + "addjob", "Adds a new listing to <#421330450418499605>.")
-          .addField(`${config.prefix}` + "dbo9hTSupdate", "Adds a update-entry for dbo9h in the channel command was used.")
+          .addField(`${config.prefix}` + "dbo9htsupdate", "Adds a update-entry for dbo9h in the channel command was used.")
           .addField(`${config.prefix}` + "say", "Let the bot do the talking.")
           .addField(`${config.prefix}` + "servers", "Show all servers bot is connected to.")
           .addField(`${config.prefix}` + "kick", "Kicks user specified with reason specified.")
@@ -390,7 +390,7 @@ if (command === 'addvote') {
 //          }
 //
 //Command used for announcing dbo9h updates.
-if(command === "gaiaupdate") {
+if(command === "dbo9htsupdate") {
       message.delete().catch(O_o=>{});
  if(!message.member.roles.some(r=>["G_D_A"].includes(r.name)) )
       return message.reply("you are not permitted to use this.");
