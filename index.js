@@ -183,14 +183,13 @@ if(command === "admin") {
     
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
-    //message.channel.send(sayMessage);
-    client.user.setActivity(sayMessage);
+    message.channel.send(sayMessage);
   }
 
 //Change Activity
     if(command === "activity") {
- if(!message.member.hasPermission('ADMINISTRATOR'))
-      return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+  //if(!message.member.hasPermission('ADMINISTRATOR'))
+   if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر فقط صاحب البوت.");
     
     const activitym = args.join(" ");
     message.delete().catch(O_o=>{}); 
@@ -542,7 +541,7 @@ if(command === "purge") {
 
 //Kickbot command
   if (command === "kickbot") {
-         if (message.author.id !== ownerID) return message.channel.send("لا يسمح لك باستخدام هذا الأمر.");
+         if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
 
          var error17 = new Discord.RichEmbed().setColor("990033")
              .setDescription('Please enter a valid server ID. **.servers** shows servers ID.')
