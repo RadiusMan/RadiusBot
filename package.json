@@ -6,8 +6,8 @@
   "author": "dbo9h",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
-    "discord.js": "^12.5.3",
-    "winston": "^3.3.3"
+    "discord.js": "^11.5.1",
+    "winston": "^3.2.1"
   },
   "devDependencies": {},
   "scripts": {
