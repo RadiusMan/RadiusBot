@@ -133,7 +133,7 @@ if(command === "admin") {
           .addField(`${config.prefix}` + "addtodo", "Adds a todo-entry to <#335008973126107139>.")
           .addField(`${config.prefix}` + "addvote", "Adds a vote-entry to <#335008891450687491>.")
           .addField(`${config.prefix}` + "addjob", "Adds a new listing to <#421330450418499605>.")
-          .addField(`${config.prefix}` + "dbo9hTSupdate", "Adds a update-entry for dbo9h in the channel command was used.")
+          .addField(`${config.prefix}` + "dbo9htsupdate", "Adds a update-entry for dbo9h in the channel command was used.")
           .addField(`${config.prefix}` + "say", "Let the bot do the talking.")
           .addField(`${config.prefix}` + "servers", "Show all servers bot is connected to.")
           .addField(`${config.prefix}` + "kick", "Kicks user specified with reason specified.")
@@ -390,7 +390,7 @@ if (command === 'addvote') {
 //          }
 //
 //Command used for announcing dbo9h updates.
-if(command === "gaiaupdate") {
+if(command === "dbo9htsupdate") {
       message.delete().catch(O_o=>{});
  if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
@@ -402,26 +402,6 @@ if(command === "gaiaupdate") {
           .setThumbnail(" https://i.imgur.com/HHrPPYY.png")
           .addField("__**dbo9h Tools & Structures updated!**__", "\nChangenotes can be found [**here**](https://steamcommunity.com/sharedfiles/filedetails/changelog/1832884459).\n\nSend in a bugreport [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101660969/). Unsure if it's a bug or not? Send it anyway!\nSuggestions should be sent in [**here**](https://steamcommunity.com/workshop/filedetails/discussion/1832884459/1637549649101663119/), we'd love to hear from you.\nSupport our work by [**donating**](https://arkmod.net/donations/) a few bucks.\n\nHope you enjoy the update!", false);
          message.channel.send(botembed).then(sentEmbed => {
-          sentEmbed.react("🇦🇺")
-          sentEmbed.react("🇧🇷")
-          sentEmbed.react("🇨🇦")
-          sentEmbed.react("🇩🇪")
-          sentEmbed.react("🇪🇺")
-          sentEmbed.react("🇬🇧")
-          sentEmbed.react("🇰🇷")
-          sentEmbed.react("🇸🇪")
-          sentEmbed.react("🇺🇸")
-          sentEmbed.react("🇺🇳")
-          sentEmbed.react("🇷🇺")
-          sentEmbed.react("🇳🇱")
-          sentEmbed.react("🇹🇷")
-          sentEmbed.react("🇬🇷")
-          sentEmbed.react("🇪🇸")
-          sentEmbed.react("🇫🇷")
-          sentEmbed.react("🇯🇵")
-          sentEmbed.react("🇮🇹")
-          sentEmbed.react("🇮🇩")
-          sentEmbed.react("🇨🇳")
             });
           }
 
