@@ -43,7 +43,7 @@ client.on("ready", () => {
 
   console.log(`${client.user.username} bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
 
-  client.user.setActivity(`dbo9h-T&S | .help`);
+  client.user.setActivity(`dbo9h-T&S | Patch Updates`);
 });
 
 
@@ -531,7 +531,7 @@ if(command === "purge") {
 
 //Kickbot command
   if (command === "kickbot") {
-         if (message.author.id !== ownerID) return message.channel.send("You are not authorized to use this command.");
+         if (message.author.id !== ownerID) return message.channel.send("لا يسمح لك باستخدام هذا الأمر.");
 
          var error17 = new Discord.RichEmbed().setColor("990033")
              .setDescription('Please enter a valid server ID. **.servers** shows servers ID.')
