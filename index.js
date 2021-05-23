@@ -5,7 +5,7 @@ const fs = require('fs');
 const GaiaOfficialRole = '594967855473360926';
 
 
-const { ReactionRoleManager } = require('discord.js'); //We import the discord.js-collector package that'll make reaction roles possible
+const { ReactionRoleManager } = require('discord.js-collector'); //We import the discord.js-collector package that'll make reaction roles possible
 
 
 //Set script as client-bot.
