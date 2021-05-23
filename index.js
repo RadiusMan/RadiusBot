@@ -2,7 +2,6 @@
 const Discord = require("discord.js");
 const random = require('random');
 const fs = require('fs');
-const jsonfile = require('jsonfile');
 const GaiaOfficialRole = '594967855473360926';
 
 //Set script as client-bot.
@@ -14,86 +13,7 @@ const config = require("./config.json");
 //Define owner. Me.
 const ownerID = '537320927378014211';
 
-//Levelup system.
-var stats = {};
-if (fs.existsSync('/volume1/stats.json')) {
-    stats = jsonfile.readFileSync('/volume1/stats.json');
-}
 
-client.on('message', (message) => {
-
-//Check if its a webhook or a bot.
-if (message.webhookID || message.author.bot) {
-  // block of code to be executed if the condition is true
-} else {
-  // block of code to be executed if the condition is false
-
-  if (message.guild.id != '540138104900812814')return;{
-
-    if (message.author.id == client.user.id)
-        return;
-
-    if (message.guild.id in stats === false) {
-        stats[message.guild.id] = {};
-    }
-
-    const guildStats = stats[message.guild.id];
-    if (message.author.id in guildStats === false) {
-        guildStats[message.author.id] = {
-            xp: 0,
-            level: 0,
-            last_message: 0
-        };
-    }
-
-    const userStats = guildStats[message.author.id];
-    if (Date.now() - userStats.last_message > 10000) {
-        userStats.xp += random.int(10, 25);
-        userStats.last_message = Date.now();
-
-        const xpToNextLevel = 5 * Math.pow(userStats.level, 2) + 50 * userStats.level + 100;
-        if (userStats.xp >= xpToNextLevel) {
-            userStats.level++;
-
-            if (userStats.level >= 5) {
-              message.member.addRole('495558358380838913');
-            }
-            if (userStats.level >= 10) {
-              message.member.addRole('634538508618301445');
-            }
-            if (userStats.level >= 25) {
-              message.member.addRole('634538456265261081');
-            }
-             if (userStats.level >= 50) {
-              message.member.addRole('634539458594865154');
-            }
-             if (userStats.level >= 100) {
-              message.member.addRole('634539508444168203');
-            }
-
-            userStats.xp = userStats.xp - xpToNextLevel;
-            message.channel.send(message.author + ' has reached level ' + userStats.level + '. **' + xpToNextLevel + '** XP needed for next level.');
-        }
-
-
-        jsonfile.writeFileSync('/volume1/stats.json', stats);
-
-        console.log(message.guild.name + ': ' + message.author.username + ' now has ' + userStats.xp + '/' + xpToNextLevel + 'XP needed for next level.');
-              if (message.content.startsWith (".xp")) {
-                   message.reply ('you are level '+ userStats.level + ', with ' + userStats.xp + '/' + xpToNextLevel + ' XP needed for next level.\nYou get a new shiny role assigned to you at level 5, 10, 25, 50 and 100.\nI have antispam built-in and will reduce your XP if you are cheating.');
-                    }}
-
-    }
-}
-    const parts = message.content.split(' ');
-      });
-
-fs.readFile('/volume1/stats.json', (err, data) => {
-    if (err) throw err;
-    let ShowStats = JSON.parse(data);
-    //console.log(data);
-    //change to ^ stats to show better info
-});
 
 //console.log('All users listed.');
 
@@ -292,7 +212,7 @@ if(!message.member.roles.some(r=>["G_D_A"].includes(r.name)) )
   let str = `${args.join(' ')}` ;
   let Title = str.split(/"/)[1];
   let Desc = str.split(/"/)[3];
-  const addJob = message.guild.channels.find(channel => channel.name === "joblist")
+  const addJob = message.guild.channels.find(channel > channel.name === "joblist")
 
     if(Title == null || Desc == null){
     message.reply(`usage: \n${config.prefix}addjob "Title" "Desc"`);
