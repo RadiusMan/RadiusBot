@@ -140,6 +140,7 @@ if(command === "admin") {
           .addField(`${config.prefix}` + "kick", "Kicks user specified with reason specified.")
           .addField(`${config.prefix}` + "google", "Shows people how to use Google.")
           .addField(`${config.prefix}` + "kickbot", "Kicks bot from server ID. This can only be used by bot owner.");
+          .addField(`${config.prefix}` + "activity", "Change activity. This can only be used by bot owner");
          message.channel.send(botembed);
        }
 
@@ -186,6 +187,15 @@ if(command === "admin") {
     client.user.setActivity(sayMessage);
   }
 
+//Change Activity
+    if(command === "activity") {
+ if(!message.member.hasPermission('ADMINISTRATOR'))
+      return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+    
+    const activitym = args.join(" ");
+    message.delete().catch(O_o=>{}); 
+    client.user.setActivity(activitym);
+  }
 //Help command.
 if(command === "help") {
        message.delete().catch(O_o=>{});
@@ -532,7 +542,8 @@ if(command === "purge") {
 
 //Kickbot command
   if (command === "kickbot") {
-         if (message.author.id !== ownerID) return message.channel.send("لا يسمح لك باستخدام هذا الأمر.");
+    message.delete().catch(O_o=>{});
+         if (message.author.id !== ownerID) return message.channel.reply("لا يسمح لك باستخدام هذا الأمر.");
 
          var error17 = new Discord.RichEmbed().setColor("990033")
              .setDescription('Please enter a valid server ID. **.servers** shows servers ID.')
