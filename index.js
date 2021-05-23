@@ -192,7 +192,7 @@ if(command === "admin") {
   
   if(command === "reactionrole") {
 
-execute(message, args, Discord, client) {
+execute(message, args, Discord, client)
 
 const channel = '664370348300697601';
 const notifyrole = message.guild.roles.cache.find(role => role.name === "db9T&S");
