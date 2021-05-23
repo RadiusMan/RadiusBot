@@ -188,27 +188,6 @@ if(command === "admin") {
     message.delete().catch(O_o=>{}); 
     message.channel.send(sayMessage);
   }
-  // test
-  
-  if(command === "reactionrole") {
-
-execute(message, args, Discord, client)
-
-const channel = '664370348300697601';
-const notifyrole = message.guild.roles.cache.find(role => role.name === "db9T&S");
-
-const notifyroleEmoji = '✨';
-
-let embed = new Discord.MessageEmbed()
-.setColor('#e42643')
-.setTitle('تجربة')
-.setDescription('test \n\n'
-+ `${notifyroleEmoji} dbo9h-T&S Notify you`);
-
-let messageEmbed = await message.channel.send(embed);
-messageEmbed.react(notifyroleEmoji);
-  
-  
 //Change Activity
     if(command === "activity") {
   //if(!message.member.hasPermission('ADMINISTRATOR'))
