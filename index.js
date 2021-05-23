@@ -102,7 +102,7 @@ if(command == "kick") {
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!kUser) return message.channel.send("Kick failed, please **@mention** your target.");
         let kReason = args.join(" ").slice(0);
-        if(!message.member.hasPermission('ADMINISTRATOR') return;
+        if(!message.member.hasPermission('ADMINISTRATOR')) return;
             
     
         let kickEmbed = new Discord.RichEmbed()
@@ -118,7 +118,7 @@ if(command == "kick") {
 //Admin commands.
 if(command === "admin") {
        message.delete().catch(O_o=>{});
-          if(!message.member.hasPermission('ADMINISTRATOR') return;
+          if(!message.member.hasPermission('ADMINISTRATOR')) return;
             
               let botembed = new Discord.RichEmbed()
           .setDescription(`💬 __**dbo9h server admin commands**__\nYou must have the [*G_D_A*] role to be able to use these commands.`)
@@ -145,7 +145,7 @@ if(command === "admin") {
 //Ping command. Regular and bot-to-websocket.  
   if(command === "ping") {
      message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
 
     const m = await message.channel.send("Ping?");
@@ -176,7 +176,7 @@ if(command === "admin") {
 
   //Say command. 
   if(command === "say") {
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
@@ -207,7 +207,7 @@ if(command === "help") {
 //Add into the joblist channel
 if (command === 'addjob') {
   message.delete().catch(O_o=>{});
-if(!message.member.hasPermission('ADMINISTRATOR') return;
+if(!message.member.hasPermission('ADMINISTRATOR')) return;
   
   let str = `${args.join(' ')}` ;
   let Title = str.split(/"/)[1];
@@ -236,7 +236,7 @@ if(!message.member.hasPermission('ADMINISTRATOR') return;
 //Add into the faq channel
 if (command === 'addfaq') {
   message.delete().catch(O_o=>{});
-if(!message.member.hasPermission('ADMINISTRATOR') return;
+if(!message.member.hasPermission('ADMINISTRATOR')) return;
   
   let str = `${args.join(' ')}` ;
   let Question = str.split(/"/)[1];
@@ -265,7 +265,7 @@ if(!message.member.hasPermission('ADMINISTRATOR') return;
 //Add into the todolist channel
 if (command === 'addtodo') {
   message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
   
   let str = `${args.join(' ')}` ;
   let TodoThing = str.split(/"/)[1];
@@ -291,7 +291,7 @@ if (command === 'addtodo') {
 //Voting system
 if (command === 'addvote') {
   message.delete().catch(O_o=>{});
-  if(!message.member.hasPermission('ADMINISTRATOR') return;
+  if(!message.member.hasPermission('ADMINISTRATOR')) return;
   
   let str = `${args.join(' ')}` ;
   let VoteThing = str.split(/"/)[1];
@@ -320,7 +320,7 @@ if (command === 'addvote') {
 // Command used for announcing Gaia Wyverns updates.
 // if(command === "gwupdate") {
 //       message.delete().catch(O_o=>{});
-//  if(!message.member.hasPermission('ADMINISTRATOR') return;
+//  if(!message.member.hasPermission('ADMINISTRATOR')) return;
 //       
 //       message.channel.send("@everyone");
 //       let botembed = new Discord.RichEmbed()
@@ -356,7 +356,7 @@ if (command === 'addvote') {
 //Command used for announcing Dino Hunter updates.
 //if(command === "dhupdate") {
 //      message.delete().catch(O_o=>{});
-// if(!message.member.hasPermission('ADMINISTRATOR') return;
+// if(!message.member.hasPermission('ADMINISTRATOR')) return;
 //      
 //      message.channel.send("@everyone");
 //      let botembed = new Discord.RichEmbed()
@@ -392,7 +392,7 @@ if (command === 'addvote') {
 //Command used for announcing dbo9h updates.
 if(command === "gaiaupdate") {
       message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
       message.channel.send("@everyone");
       let botembed = new Discord.RichEmbed()
@@ -428,7 +428,7 @@ if(command === "gaiaupdate") {
 ////Command used for announcing Gaia updates.
 //if(command === "gaiabeaconsupdate") {
 //      message.delete().catch(O_o=>{});
-// if(!message.member.hasPermission('ADMINISTRATOR') return;
+// if(!message.member.hasPermission('ADMINISTRATOR')) return;
 //      
 //      message.channel.send("@everyone");
 //      let botembed = new Discord.RichEmbed()
@@ -464,7 +464,7 @@ if(command === "gaiaupdate") {
 //Show testserver info
 if(command === "testserver") {
     message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
       let string = '';
  {
@@ -483,7 +483,7 @@ if(command === "testserver") {
 //Servers command
   if (command === "servers") {
   message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
     let string = '';
 
@@ -503,7 +503,7 @@ if(command === "testserver") {
 //Google.
   if(command === "google") {
       message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
       message.channel.send(`The answer to your question can be found here <http://tiny.cc/bd8gfz>.`);
   }
@@ -511,7 +511,7 @@ if(command === "testserver") {
 //Uptime command. Specified in milliseconds. % is modulo.
   if(command === "uptime") {
       message.delete().catch(O_o=>{});
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
       let days = Math.floor(client.uptime / 86400000);
       let hours = Math.floor(client.uptime / 3600000) % 24;
@@ -523,7 +523,7 @@ if(command === "testserver") {
 
 //Purge command. 
 if(command === "purge") {
- if(!message.member.hasPermission('ADMINISTRATOR') return;
+ if(!message.member.hasPermission('ADMINISTRATOR')) return;
       
     const deleteCount = parseInt(args[0], 10);
         if(!deleteCount || deleteCount < 2 || deleteCount > 100)
