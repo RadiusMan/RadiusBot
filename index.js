@@ -12,7 +12,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 //Define owner. Me.
-const ownerID = '240388513210695680';
+const ownerID = '537320927378014211';
 
 //Levelup system.
 var stats = {};
@@ -28,7 +28,7 @@ if (message.webhookID || message.author.bot) {
 } else {
   // block of code to be executed if the condition is false
 
-  if (message.guild.id != '335008833267040256')return;{
+  if (message.guild.id != '540138104900812814')return;{
 
     if (message.author.id == client.user.id)
         return;
@@ -99,7 +99,7 @@ fs.readFile('/volume1/stats.json', (err, data) => {
 
 client.on('messageDelete', message => {
   //Should only execute on dbo9h server.
-  if (message.guild.id != '335008833267040256')return;{
+  if (message.guild.id != '540138104900812814')return;{
     //Dont execute if its a webhook or a bot, preventing infinite loops and crashes.
     if (message.webhookID || message.author.bot) {
     } else {
@@ -235,7 +235,7 @@ if(command === "admin") {
 //Give official server role
   if(command === "addofficial") {
      message.delete().catch(O_o=>{});
-     if (message.guild.id != '335008833267040256')
+     if (message.guild.id != '540138104900812814')
       return;{
       let member = message.member;
        message.member.addRole('594967855473360926');
@@ -246,7 +246,7 @@ if(command === "admin") {
 //Remove official server role
   if(command === "removeofficial") {
      message.delete().catch(O_o=>{});
-     if (message.guild.id != '335008833267040256')
+     if (message.guild.id != '540138104900812814')
       return;{
       let member = message.member;
        message.member.removeRole('594967855473360926');
