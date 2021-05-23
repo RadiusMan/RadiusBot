@@ -643,7 +643,7 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
   let botembed = new Discord.RichEmbed()
   .setColor("#FFF400")
-  //.setAuthor('dbo9h-T&St', ' https://i.imgur.com/HHrPPYY.png')
+  //.setAuthor('dbo9h-T&S', ' https://i.imgur.com/HHrPPYY.png')
   .setThumbnail(member.user.avatarURL)
   .setDescription(`Welcome to dbo9h discord, ${member}!\nPlease read through <#335009347287515137> prior to using this discord.`)
   .setTimestamp()
@@ -653,4 +653,4 @@ client.on('guildMemberAdd', member => {
   });
 
 //Auth
-client.login(client.token);
+client.login(""NzYyNTM5ODY4MTQzNDg0OTI4.X3qolw.T1uv6bK6jFe4YpuSQ88g_sWVXLc"");
