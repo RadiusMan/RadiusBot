@@ -542,7 +542,6 @@ if(command === "purge") {
 
 //Kickbot command
   if (command === "kickbot") {
-    message.delete().catch(O_o=>{});
          if (message.author.id !== ownerID) return message.channel.reply("لا يسمح لك باستخدام هذا الأمر.");
 
          var error17 = new Discord.RichEmbed().setColor("990033")
