@@ -653,4 +653,4 @@ client.on('guildMemberAdd', member => {
   });
 
 //Auth
-client.login("ODQ1OTMwNzgyMDgxMTU1MDky.YKoIbw.VKaF49xPWW8xUgTymcCcaCc-zkE");
+client.login("NzYyNTM5ODY4MTQzNDg0OTI4.X3qolw.OyibCL1Zsqz5CxSiYfrPfpQggG4");
