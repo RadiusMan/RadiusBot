@@ -66,7 +66,7 @@ client.on("guildDelete", guild => {
 });
 
 //Scans all new messages, deletes and notifies user that they are not permitted to use the swear words if its match the filter below.
-let set = new Set(['nigger', 'negro', 'nigga', 'wigga', 'wigger'])
+let set = new Set(['nigger', 'negro', 'nigga', 'wigga', 'wigger', 'fuck', 'dick', 'bitch'])
 client.on('message', (msg) => {
     if(msg.author.bot) {
     return
@@ -76,7 +76,8 @@ client.on('message', (msg) => {
   for(var i = 0; i < wordArray.length; i++) {
     if(set.has(wordArray[i])) {
     msg.delete()
-    msg.channel.send(`${msg.author.username}, that's a word I dont like.`)
+    //msg.channel.send(`${msg.author.username}, that's a word I dont like.`)
+    msg.reply(` that's a word I dont like it.`)
     break
     }
     console.log(`Message scanned`)
