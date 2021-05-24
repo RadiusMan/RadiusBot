@@ -422,7 +422,9 @@ if(command === "dbo9htsupdate") {
  //if(!message.member.hasPermission('ADMINISTRATOR'))
    if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
       
-      message.channel.send("@dbo9h-T&S-NotifyMe");
+      //message.channel.send("@dbo9h-T&S-NotifyMe");
+      //message.channel.send(`<@&${'845977190868713482'}> Found one!! ${"d"}`);
+        message.channel.send(`<@&${'846476195386490890'}> ${""}`);
       let botembed = new Discord.RichEmbed()
           .setColor('#FFF400')
           .setTimestamp()
