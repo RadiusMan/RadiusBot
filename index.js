@@ -422,7 +422,7 @@ if(command === "dbo9htsupdate") {
  //if(!message.member.hasPermission('ADMINISTRATOR'))
    if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
       
-      //message.channel.send("@everyone");
+      message.channel.send("@dbo9h-T&S-NotifyMe");
       let botembed = new Discord.RichEmbed()
           .setColor('#FFF400')
           .setTimestamp()
