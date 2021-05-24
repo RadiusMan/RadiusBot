@@ -236,7 +236,7 @@ if (command === 'addjob') {
   let str = `${args.join(' ')}` ;
   let Title = str.split(/"/)[1];
   let Desc = str.split(/"/)[3];
-  const addJob = message.guild.channels.find(channel > channel.name === "joblist")
+  const addJob = message.guild.channels.find(channel => channel.name === "joblist")
 
     if(Title == null || Desc == null){
     message.reply(`usage: \n${config.prefix}addjob "Title" "Desc"`);
