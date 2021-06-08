@@ -49,7 +49,7 @@ client.on("ready", () => {
 
   console.log(`${client.user.username} bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
 
-  client.user.setActivity(`dbo9h Tools & Structures`);
+  client.user.setActivity(`dbo9h Mods`);
 });
 
 
