@@ -167,7 +167,7 @@ if(command === "admin") {
 //Give official server role
   if(command === "addofficial") {
      message.delete().catch(O_o=>{});
-     if (message.guild.id != '537320927378014211')
+     if (message.guild.id != '540138104900812814')
       return;{
       let member = message.member;
        message.member.addRole('576646111918555156');
@@ -178,7 +178,7 @@ if(command === "admin") {
 //Remove official server role
   if(command === "removeofficial") {
      message.delete().catch(O_o=>{});
-     if (message.guild.id != '537320927378014211')
+     if (message.guild.id != '540138104900812814')
       return;{
       let member = message.member;
        message.member.removeRole('576646111918555156');
