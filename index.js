@@ -170,7 +170,7 @@ if(command === "admin") {
      if (message.guild.id != '540138104900812814')
       return;{
       let member = message.member;
-       message.member.addRole('845907649470922753');
+       message.member.addRole('931464351284596746');
        return message.reply("role granted!");
           }
     }
@@ -181,7 +181,7 @@ if(command === "admin") {
      if (message.guild.id != '540138104900812814')
       return;{
       let member = message.member;
-       message.member.removeRole('845907649470922753');
+       message.member.removeRole('931464351284596746');
        return message.reply("role removed!");
           }
     }
