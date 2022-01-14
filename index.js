@@ -2,7 +2,8 @@
 const Discord = require("discord.js");
 const random = require('random');
 const fs = require('fs');
-const GaiaOfficialRole = '594967855473360926';
+//const GaiaOfficialRole = '594967855473360926';
+const GaiaOfficialRole = '576646111918555156';
 
 
 
@@ -166,10 +167,10 @@ if(command === "admin") {
 //Give official server role
   if(command === "addofficial") {
      message.delete().catch(O_o=>{});
-     if (message.guild.id != '540138104900812814')
+     if (message.guild.id != '537320927378014211')
       return;{
       let member = message.member;
-       message.member.addRole('594967855473360926');
+       message.member.addRole('576646111918555156');
        return message.reply("role granted!");
           }
     }
@@ -177,10 +178,10 @@ if(command === "admin") {
 //Remove official server role
   if(command === "removeofficial") {
      message.delete().catch(O_o=>{});
-     if (message.guild.id != '540138104900812814')
+     if (message.guild.id != '537320927378014211')
       return;{
       let member = message.member;
-       message.member.removeRole('594967855473360926');
+       message.member.removeRole('576646111918555156');
        return message.reply("role removed!");
           }
     }
