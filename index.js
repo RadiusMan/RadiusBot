@@ -159,7 +159,7 @@ if(command === "admin") {
   if(command === "ping") {
      message.delete().catch(O_o=>{});
  //if(!message.member.hasPermission('ADMINISTRATOR'))
-      if (message.author.id !== ownerID + GIMID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+      if (message.author.id !== ownerID + gimID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
 
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
