@@ -178,7 +178,7 @@ if(command === "admin") {
  
  
   if(command === "addmtest") {
-  if (!message.member.roles.has'606128056519884836')) return message.react('❌')
+ if (!message.member.roles.find(role => role.name === 'مشرف'))  return message.react('❌');
     let arg = message.mentions.users.first();
        if(!arg) return message.channel.send('MENTION!');
        
