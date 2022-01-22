@@ -179,14 +179,14 @@ if(command === "admin") {
  
   if(command === "addmtest") {
  if (!message.member.roles.find(role => role.name === 'مشرف'))  return message.react('❌');
-    let member = message.mentions.users.first();
        if(!member) return message.channel.send('MENTION!');
        let w = message.guild.roles.find(r => r.name === "Test");
+let member = message.mentions.members.first();
 
      message.delete().catch(O_o=>{});
      if (message.guild.id != '540138104900812814')
       return;{
-       member.addRole(w);
+       member.roles.add(w);
        return message.reply("SUCCESS!");
           }
     }
