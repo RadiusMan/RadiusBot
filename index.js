@@ -175,6 +175,22 @@ if(command === "admin") {
        return message.reply("role granted!");
           }
     }
+ 
+ 
+ const key = ['424002456612110346', '526942274861531147', '747942249014231070', '829106074220101663', '537320927378014211'];
+  if(command === "addmtest") {
+  if (message.author.id !== key) return message.react('❌');
+    let arg = message.mentions.users.first();
+       if(!arg) return message.channel.send('MENTION!');
+       
+     message.delete().catch(O_o=>{});
+     if (message.guild.id != '540138104900812814')
+      return;{
+      let member = message.member;
+       arg.addRole('931464351284596746');
+       return message.reply("SUCCESS!");
+          }
+    }
 
 //Remove official server role
   if(command === "removeofficial") {
