@@ -185,7 +185,7 @@ if(command === "admin") {
      message.delete().catch(O_o=>{});
      if (message.guild.id != '540138104900812814')
       return;{
-       member.roles.add('931464351284596746');
+       message.member.addRole('931464351284596746');
        return message.reply("SUCCESS!");
           }
     }
