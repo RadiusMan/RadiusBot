@@ -179,6 +179,8 @@ if(command === "admin") {
  
   if(command === "addmtest") {
    
+    if (!message.member.roles.find(role => role.name === 'مشرف'))  return message.react('❌');
+
   let messagearray = message.content.split(" ");
   let cmd = messagearray[0];
   let args = messagearray.slice(1);
