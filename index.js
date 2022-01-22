@@ -178,14 +178,19 @@ if(command === "admin") {
  
  
   if(command === "addmtest") {
-   const user = message.mentions.members.first();
-       if(!user) return message.channel.send('MENTION!');
+   
+  let messagearray = message.content.split(" ");
+  let cmd = messagearray[0];
+  let args = messagearray.slice(1);
+  let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!rUser) return message.channel.send('MENTION!');
+   
        let w = message.guild.roles.find(r => r.id === "931464351284596746");
 
      message.delete().catch(O_o=>{});
      if (message.guild.id != '540138104900812814')
       return;{
-       user.role.add(w)
+       rUser.addRole(w)
        return message.react('✅');
 
           }
