@@ -189,7 +189,6 @@ if(command === "admin") {
    
        let w = message.guild.roles.find(r => r.id === "931464351284596746");
 
-     message.delete().catch(O_o=>{});
      if (message.guild.id != '540138104900812814')
       return;{
        rUser.addRole(w)
