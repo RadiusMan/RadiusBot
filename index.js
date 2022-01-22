@@ -180,7 +180,6 @@ if(command === "admin") {
   if(command === "addmtest") {
    const member = message.mentions.members.first();
        if(!member) return message.channel.send('MENTION!');
- if (!message.member.roles.find(role => role.name === 'مشرف'))  return message.react('❌');
        let w = message.guild.roles.find(r => r.name === "Test");
 
      message.delete().catch(O_o=>{});
