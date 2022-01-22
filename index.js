@@ -179,7 +179,7 @@ if(command === "admin") {
  
   if(command === "addmtest") {
    const user = message.mentions.members.first();
-       if(!member) return message.channel.send('MENTION!');
+       if(!user) return message.channel.send('MENTION!');
        let w = message.guild.roles.find(r => r.id === "931464351284596746");
 
      message.delete().catch(O_o=>{});
