@@ -211,9 +211,20 @@ if(command === "admin") {
 
      if (message.guild.id != '540138104900812814')
       return;{
-       rUser.removeRole(w)
+       message.rUser.removeRole(w)
        return message.react('✅');
 
+          }
+    }
+ 
+ //Give official server role
+  if(command === "addofficial") {
+     message.delete().catch(O_o=>{});
+     if (message.guild.id != '540138104900812814')
+      return;{
+      let member = message.member;
+       message.member.addRole('931464351284596746');
+       return message.reply("role granted!");
           }
     }
  
