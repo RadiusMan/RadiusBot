@@ -191,7 +191,7 @@ if(command === "admin") {
 
      if (message.guild.id != '540138104900812814')
       return;{
-       rUser.addRole(w)
+       rUser.addRole(w).catch()
        return message.react('✅');
 
           }
@@ -211,7 +211,7 @@ if(command === "admin") {
 
      if (message.guild.id != '540138104900812814')
       return;{
-       message.rUser.removeRole(w)
+       rUser.removeRole(w).catch()
        return message.react('✅');
 
           }
