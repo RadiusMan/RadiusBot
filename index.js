@@ -197,6 +197,26 @@ if(command === "admin") {
           }
     }
 
+   if(command === "rmt") {
+   
+    if (!message.member.roles.find(role => role.name === 'مشرف'))  return message.react('❌');
+
+  let messagearray = message.content.split(" ");
+  let cmd = messagearray[0];
+  let args = messagearray.slice(1);
+  let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!rUser) return message.channel.send('MENTION!');
+   
+       let w = message.guild.roles.find(r => r.id === "931464351284596746");
+
+     if (message.guild.id != '540138104900812814')
+      return;{
+       rUser.removeRole(w)
+       return message.react('✅');
+
+          }
+    }
+ 
 //Remove official server role
   if(command === "removeofficial") {
      message.delete().catch(O_o=>{});
