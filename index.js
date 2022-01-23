@@ -194,8 +194,8 @@ if(command === "admin") {
        rUser.addRole(w)
        return message.react('✅');
 
-          } catch (err) {
-          }
+          } 
+          
     }
 
    if(command === "rmt") {
@@ -215,8 +215,7 @@ if(command === "admin") {
        rUser.removeRole(w)
        return message.react('✅');
 
-          } catch (err) {
-          }
+      }
     }
  
  //Give official server role
