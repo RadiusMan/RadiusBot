@@ -316,7 +316,7 @@ if (command === 'addjob') {
 if (command === 'addfaq') {
   message.delete().catch(O_o=>{});
 //if(!message.member.hasPermission('ADMINISTRATOR'))
-//if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
   
   let str = `${args.join(' ')}` ;
   let Question = str.split(/"/)[1];
@@ -346,7 +346,7 @@ if (command === 'addfaq') {
 if (command === 'addtodo') {
   message.delete().catch(O_o=>{});
  //if(!message.member.hasPermission('ADMINISTRATOR'))
- //if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+ if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
   
   let str = `${args.join(' ')}` ;
   let TodoThing = str.split(/"/)[1];
@@ -373,7 +373,7 @@ if (command === 'addtodo') {
 if (command === 'addvote') {
   message.delete().catch(O_o=>{});
   //if(!message.member.hasPermission('ADMINISTRATOR'))
-  //if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
+  if (message.author.id !== ownerID) return message.reply("لا يسمح لك باستخدام هذا الأمر.");
   
   let str = `${args.join(' ')}` ;
   let VoteThing = str.split(/"/)[1];
