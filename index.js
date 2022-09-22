@@ -15,8 +15,8 @@ const { Player } = require("discord-player")
 
 const LOAD_SLASH = process.argv[2] == "load"
 
-const CLIENT_ID = "924846888929337354"
-const GUILD_ID = "924832445050781766"
+const CLIENT_ID = "762539868143484928"
+const GUILD_ID = "656982495320997905"
 
 const client = new Discord.Client({
     intents: [
