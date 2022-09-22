@@ -79,7 +79,7 @@ else {
 //player
 
 //Set script as client-bot.
-const client = new Discord.Client();
+//const client = new Discord.Client();
 
 //Load the config-file with token.
 const config = require("./config.json");
